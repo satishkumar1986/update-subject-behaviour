@@ -1,0 +1,17 @@
+<h1>Right Component</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <table class="table">
+                <tr *ngFor="let data of appoinment">
+                    <td>{{data.id}}</td>
+                    <td>{{data.visitId}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.status}}</td>
+                    <td><button (click)="getStatus(data.visitId, 'Confirm')">Confirm</button></td>
+                    <td><button (click)="getStatus(data.visitId, 'Cancel')">Cancel</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
